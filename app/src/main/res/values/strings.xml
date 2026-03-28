@@ -1,10 +1,3 @@
 <resources>
-    <string name="app_name">AtvP1_LuisFelipe</string>
-    <string name="valor1">Valor 1:</string>
-    <string name="valor2">Valor 2:</string>
-    <string name="add_button">+</string>
-    <string name="minus_button">-</string>
-    <string name="multiply_button">*</string>
-    <string name="divide_button">/</string>
-    <string name="result_text">O resultado é:</string>
+    <string name="app_name">Main_TEMPLATE</string>
 </resources>

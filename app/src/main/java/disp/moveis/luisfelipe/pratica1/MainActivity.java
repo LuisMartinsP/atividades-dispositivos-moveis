@@ -26,20 +26,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void clickButtonAdd(View view){
-        EditText input1 = (EditText) findViewById(R.id.input1);
-        EditText input2 = (EditText) findViewById(R.id.input2);
-
-        TextView output = (TextView) findViewById(R.id.output);
-
-        String tag = view.getTag().toString();
-
-        int valor1 = input1.getText().toInt();
-        int valor2 = input2.getText().toInt();
-
-        if(tag.equals("soma")){
-            int valorFinal = valor1 + valor2;
-            output.setText(valorFinal);
-        }
-    }
 }
