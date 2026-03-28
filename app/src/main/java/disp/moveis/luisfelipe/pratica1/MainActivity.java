@@ -36,6 +36,20 @@ public class MainActivity extends AppCompatActivity {
         if (tag.equals("+") || tag.equals("-") || tag.equals("X") || tag.equals("/")) {
             ultimoFoiEquals = false;
             _visor.append(" " + tag + " ");
+        }
+        else if (tag.equals(".")) {
+            String texto = _visor.getText().toString();
+
+            if (texto.isEmpty() || texto.endsWith(" ")) {
+                return; // ignora se estiver vazio ou após operador
+            }
+
+            String[] partes = texto.split(" ");
+            String ultimaParte = partes[partes.length - 1];
+
+            if (!ultimaParte.contains(".")) {
+                _visor.append(tag);
+            }
         } else {
             if (ultimoFoiEquals) {
                 // usuário digitou número após equals, descarta resultado
