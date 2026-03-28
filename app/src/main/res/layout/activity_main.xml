@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -8,106 +7,107 @@
     tools:context=".MainActivity">
 
         <TextView
+            android:id="@+id/valor1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/valor1"
-            android:id="@+id/valor1"
             android:layout_centerHorizontal="true"
-            android:layout_alignStart="@+id/input1"
-            android:layout_above="@+id/input1"
-            />
+            android:layout_marginTop="100dp"
+            android:layout_alignParentTop="true"/>
+
         <EditText
+            android:id="@+id/input1"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:id="@+id/input1"
-            android:layout_above="@+id/valor2"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="50dp"
-            />
+            android:layout_below="@id/valor1"
+            android:layout_marginTop="8dp"/>
 
         <TextView
+            android:id="@+id/valor2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/valor2"
-            android:id="@+id/valor2"
             android:layout_centerHorizontal="true"
-            android:layout_above="@id/input2"
-            android:layout_alignStart="@id/input2"
+            android:layout_below="@id/input1"
+            android:layout_marginTop="30dp"/>
 
-            />
         <EditText
+            android:id="@+id/input2"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:id="@+id/input2"
-            android:layout_above="@id/button"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="50dp"/>
+            android:layout_below="@id/valor2"
+            android:layout_marginTop="8dp"/>
 
-        <Button
-            android:layout_width="55dp"
+        <LinearLayout
+            android:id="@+id/botoesContainer"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:text="@string/add_button"
-
-            android:tag="soma"
-
-            android:layout_toStartOf="@id/button"
-            android:layout_centerVertical="true"
-            />
-
-        <Button
-            android:layout_width="55dp"
-            android:layout_height="wrap_content"
-
-            android:tag="subtracao"
-
-            android:text="@string/minus_button"
-            android:id="@+id/button"
-
-            android:layout_toStartOf="@id/input2"
-            android:layout_centerVertical="true"
-            />
-
-        <Button
-            android:layout_width="55dp"
-            android:layout_height="wrap_content"
-
-            android:tag="multiplicacao"
-
-            android:text="@string/multiply_button"
-            android:id="@+id/button2"
+            android:orientation="horizontal"
             android:layout_below="@id/input2"
-            android:layout_toEndOf="@id/input2" />
-        <Button
-            android:layout_width="55dp"
-            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
 
-            android:tag="divisao"
-            android:text="@string/divide_button"
-            android:layout_below="@id/input2"
-            android:layout_toEndOf="@id/button2" />
+                <Button
+                    style="@style/BotaoOperacao"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="clickButtonOperation"
+                    android:text="@string/add_button"
+                    android:tag="soma"
+
+                    />
+
+                <Button
+                    style="@style/BotaoOperacao"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="clickButtonOperation"
+                    android:text="@string/minus_button"
+                    android:tag="subtracao"
+                    android:id="@+id/buttonSub"/>
+
+                <Button
+                    style="@style/BotaoOperacao"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="clickButtonOperation"
+                    android:text="@string/multiply_button"
+                    android:tag="multiplicacao"
+                    android:id="@+id/buttonMult"/>
+
+                <Button
+                    style="@style/BotaoOperacao"
+                    android:layout_width="55dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="clickButtonOperation"
+                    android:text="@string/divide_button"
+                    android:tag="divisao"/>
+
+        </LinearLayout>
+
         <TextView
+            android:id="@+id/result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/result_text"
-
-            android:layout_below="@id/button"
-
-            android:id="@+id/result"
+            android:layout_below="@id/botoesContainer"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"/>
 
         <TextView
+            android:id="@+id/output"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:id="@+id/output"
-
-            android:layout_below="@id/button2"
-            android:layout_alignEnd="@id/result"
-            android:layout_marginTop="50dp"/>
-
+            android:layout_below="@id/result"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"/>
 
 </RelativeLayout>

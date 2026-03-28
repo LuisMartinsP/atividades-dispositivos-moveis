@@ -5,5 +5,10 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="BotaoOperacao">
+        <item name="android:background">@drawable/botao_operacao</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
     <style name="Theme.AtvP1_LuisFelipe" parent="Base.Theme.AtvP1_LuisFelipe" />
 </resources>

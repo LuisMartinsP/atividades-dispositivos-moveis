@@ -1,16 +1,17 @@
 package disp.moveis.luisfelipe.pratica1;
 
 import android.os.Bundle;
+import android.view.View;
+
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void clickButtonAdd(View view){
+    public void clickButtonOperation(View view){
         EditText input1 = (EditText) findViewById(R.id.input1);
         EditText input2 = (EditText) findViewById(R.id.input2);
 
@@ -34,12 +35,22 @@ public class MainActivity extends AppCompatActivity {
 
         String tag = view.getTag().toString();
 
-        int valor1 = input1.getText().toInt();
-        int valor2 = input2.getText().toInt();
-
+        double valor1 = Double.parseDouble(input1.getText().toString().replace(",","."));
+        double valor2 = Double.parseDouble(input2.getText().toString());
+        double valorFinal = 0.0;
         if(tag.equals("soma")){
-            int valorFinal = valor1 + valor2;
-            output.setText(valorFinal);
+            valorFinal = valor1 + valor2;
+
         }
+        else if(tag.equals("subtracao")){
+            valorFinal = valor1 - valor2;
+        }
+        else if(tag.equals("multiplicacao")){
+            valorFinal = valor1*valor2;
+        }
+        else if(tag.equals("divisao")){
+            valorFinal = valor1/valor2;
+        }
+        output.setText(String.valueOf(valorFinal));
     }
 }
