@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         ultimoFoiEquals = true;
 
         if (partes.length != 3) {
-            _visor.setText("Erro");
+            _visor.setText("ERROR");
             return;
         }
         try {
@@ -107,18 +107,18 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "/":
                     if (num2 == 0) {
-                        _visor.setText("Erro: divisão por zero");
+                        _visor.setText("ERROR");
                         return;
                     }
                     resultado = num1 / num2;
                     break;
                 default:
-                    _visor.setText("Erro");
+                    _visor.setText("ERROR");
                     return;
             }
             _visor.setText(String.valueOf(resultado));
         }catch(NumberFormatException e){
-            _visor.setText("Erro:número inválido");
+            _visor.setText("ERROR");
         }
     }
 }
