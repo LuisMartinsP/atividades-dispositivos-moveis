@@ -38,18 +38,22 @@ public class MainActivity extends AppCompatActivity {
         double valor1 = Double.parseDouble(input1.getText().toString().replace(",","."));
         double valor2 = Double.parseDouble(input2.getText().toString());
         double valorFinal = 0.0;
-        if(tag.equals("soma")){
-            valorFinal = valor1 + valor2;
 
-        }
-        else if(tag.equals("subtracao")){
-            valorFinal = valor1 - valor2;
-        }
-        else if(tag.equals("multiplicacao")){
-            valorFinal = valor1*valor2;
-        }
-        else if(tag.equals("divisao")){
-            valorFinal = valor1/valor2;
+        switch (tag) {
+            case "soma":
+                valorFinal = valor1 + valor2;
+
+                break;
+            case "subtracao":
+                valorFinal = valor1 - valor2;
+                break;
+            case "multiplicacao":
+                valorFinal = valor1 * valor2;
+                break;
+            case "divisao":
+                if (valor2 == 0) return;
+                valorFinal = valor1 / valor2;
+                break;
         }
         output.setText(String.valueOf(valorFinal));
     }
