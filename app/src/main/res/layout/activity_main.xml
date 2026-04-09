@@ -7,7 +7,110 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+
+        android:text="@string/nome"
+        />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
 
 
 
+        android:id="@+id/campoNome"
+        android:layout_below="@id/nome"
+        android:layout_alignStart="@id/nome"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="20dp"
+        android:id="@+id/textLine"
+
+        android:layout_below="@id/campoNome"
+        android:layout_alignStart="@id/campoNome"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/idade"
+
+            android:layout_marginEnd="42dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pesoUM"
+
+            android:layout_marginEnd="56dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alturaUM"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+
+        android:id="@+id/inputLine"
+
+        android:layout_below="@id/textLine"
+        android:layout_alignStart="@id/textLine"
+        >
+
+        <EditText
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="40dp"
+
+            android:inputType="number"
+
+            android:id="@+id/campoIdade"
+
+            />
+        <EditText
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+
+            android:inputType="numberDecimal"
+            android:layout_marginEnd="30dp"
+            android:id="@+id/campoPeso"
+        />
+    
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+
+            android:inputType="numberDecimal"
+
+            android:id="@+id/campoAltura"
+            />
+    </LinearLayout>
+    
+    <Button
+        style="@style/BotaoRelatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+
+        android:layout_below="@id/inputLine"
+
+        android:layout_marginTop="100dp"
+        android:layout_centerInParent="true"
+
+        android:onClick="clickCalculoImc"
+        android:textColor="@color/black"
+
+        android:text="@string/tituloRelatorio"/>
 </RelativeLayout>

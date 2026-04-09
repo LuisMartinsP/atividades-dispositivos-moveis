@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tela2"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/titulo"
+
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="30dp"
+        android:typeface="serif"
+
+        android:text="@string/tituloRelatorio"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titulo"
+
+        android:layout_alignStart="@id/titulo"
+        android:layout_marginTop="30dp"
+
+
+        android:id="@+id/nomeLine"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginEnd="14dp"
+            android:textStyle="bold"
+            android:text="@string/nome"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/nameField"
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/idadeLine"
+        android:layout_below="@id/nomeLine"
+        android:layout_alignStart="@id/nomeLine"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+
+            android:text="@string/idade"
+            android:layout_marginEnd="14dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idadeField"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/pesoLine"
+        android:layout_below="@id/idadeLine"
+        android:layout_alignStart="@id/idadeLine"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+
+            android:text="@string/peso"
+            android:layout_marginEnd="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pesoField"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/alturaLine"
+        android:layout_below="@id/pesoLine"
+        android:layout_alignStart="@id/pesoLine"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+
+            android:text="@string/altura"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/alturaField"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/imcLine"
+        android:layout_below="@id/alturaLine"
+        android:layout_alignStart="@id/alturaLine"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+
+            android:text="@string/imc"
+            android:layout_marginEnd="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imcField"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/classLine"
+        android:layout_below="@id/imcLine"
+        android:layout_alignStart="@id/imcLine"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textStyle="bold"
+            android:text="@string/classificacao"
+            android:layout_marginEnd="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/classField"
+            />
+
+    </LinearLayout>
+
+    <Button
+        style="@style/BotaoRelatorio"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/classLine"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="50dp"
+
+        android:onClick="novoCalculo"
+
+        android:textColor="@color/black"
+        android:text="@string/botaoVoltar"
+        />
+
+</RelativeLayout>

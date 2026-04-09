@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Main_TEMPLATE</string>
+    <string name="nome">Nome:</string>
+    <string name="idade">Idade:</string>
+    <string name="peso">Peso:</string>
+    <string name="pesoUM">Peso(KG):</string>
+    <string name="altura">Altura:</string>
+    <string name="alturaUM">Altura(m):</string>
+    <string name="imc">imc</string>
+    <string name="classificacao">Classificação:</string>
+    <string name ="tituloRelatorio">Relatório Nutricional</string>
+    <string name="botaoVoltar">Realizar novo Cálculo</string>
 </resources>
