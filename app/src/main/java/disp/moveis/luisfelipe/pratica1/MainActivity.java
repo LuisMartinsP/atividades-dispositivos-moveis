@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         double alturaDouble = Double.parseDouble(alturaStr);
 
         double imc = pesoDouble / (alturaDouble*alturaDouble);
+
         String classificacao = "";
         if(imc < 18.5){
             classificacao = "Abaixo do peso";
