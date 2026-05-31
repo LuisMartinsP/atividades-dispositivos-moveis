@@ -1,68 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <LinearLayout
-        android:id="@+id/lanternaWrapper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp"
-        >
-
-        <TextView
-            android:id="@+id/lanternaTexto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lanterna: "/>
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/lanternaSwitcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/viberWrapper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp">
-
-        <TextView
-            android:id="@+id/viberTexto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vibração:"/>
-
-        <com.google.android.material.materialswitch.MaterialSwitch
-            android:id="@+id/viberSwitcher"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="false" />
-
-    </LinearLayout>
-
+    android:layout_height="match_parent">
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:text="Classificar leituras"
-        android:onClick="classificar_leituras"/>
-
-
-
+        android:text="Devolver classificações"
+        android:onClick="devolverClassificacoes"/>
 
 </RelativeLayout>

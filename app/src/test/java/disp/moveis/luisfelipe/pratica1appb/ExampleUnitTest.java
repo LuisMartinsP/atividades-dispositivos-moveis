@@ -1,4 +1,4 @@
-package disp.moveis.luisfelipe.pratica1;
+package disp.moveis.luisfelipe.pratica1appb;
 
 import org.junit.Test;
 

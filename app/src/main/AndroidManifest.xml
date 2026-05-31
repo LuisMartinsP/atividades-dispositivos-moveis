@@ -14,16 +14,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AtvP1_LuisFelipe"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="disp.moveis.luisfelipe.CLASSIFICAR_LEITURAS" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
     </application>
+
 
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.FLASHLIGHT"/>

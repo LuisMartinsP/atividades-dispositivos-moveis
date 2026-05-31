@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "disp.moveis.luisfelipe.pratica1"
+    namespace = "disp.moveis.luisfelipe.pratica1appb"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "disp.moveis.luisfelipe.pratica1"
+        applicationId = "disp.moveis.luisfelipe.pratica1appb"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
