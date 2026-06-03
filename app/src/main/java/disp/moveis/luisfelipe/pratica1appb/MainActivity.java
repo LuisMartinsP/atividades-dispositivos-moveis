@@ -21,12 +21,6 @@ public class MainActivity extends AppCompatActivity {
         lux = getIntent().getFloatExtra("lux", 0f);
         proximidade = getIntent().getFloatExtra("proximidade", 0f);
 
-        // Exibe os valores na tela
-        TextView textoLux = findViewById(R.id.textoLux);
-        TextView textoProximidade = findViewById(R.id.textoProximidade);
-
-        textoLux.setText("Luminosidade: " + lux + " lx");
-        textoProximidade.setText("Proximidade: " + proximidade + " cm");
     }
 
     public void devolverClassificacoes(View v) {
