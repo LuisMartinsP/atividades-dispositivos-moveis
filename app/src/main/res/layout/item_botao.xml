@@ -1,0 +1,9 @@
+<!-- item_gestao_botao.xml -->
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemBotao"
+    android:layout_width="40dp"
+    android:layout_height="48dp"
+    android:layout_marginEnd="10dp"
+    android:src="@android:drawable/ic_delete"
+    android:scaleType="fitCenter"
+    android:background="@null"/>

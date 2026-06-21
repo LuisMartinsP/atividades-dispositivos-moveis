@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLocal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:gravity="center_vertical"
+    android:singleLine="true"
+    android:layout_marginStart="10dp"
+    android:textColor="@color/white"
+    android:textSize="16sp"/>

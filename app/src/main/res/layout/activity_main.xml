@@ -5,9 +5,93 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/dark_gray">
 
 
+    <LinearLayout
+        android:id="@+id/primeiroCampo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+    >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Local:"
+            android:textColor="@color/light_gray"/>
+        <AutoCompleteTextView
+            android:id="@+id/autoComplete"
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
 
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/segundoCampo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/primeiroCampo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoria do Local:"
+            android:textColor="@color/light_gray"/>
+        <Spinner
+            android:id="@+id/spinnerCategoria"
+            android:layout_width="385dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/terceiroCampo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/segundoCampo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posicionamento Global"
+            android:layout_gravity="center"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/textLatitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latitude: "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/light_gray"/>
+        <TextView
+            android:id="@+id/textLongitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Longitude: "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/light_gray"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="385dp"
+        android:layout_height="75dp"
+        android:onClick="checkIn"
+        android:layout_below="@id/terceiroCampo"
+        app:cornerRadius="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:backgroundTint="@color/light_gray"
+        android:text="CHECK-IN"/>
 
 </RelativeLayout>
